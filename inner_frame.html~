@@ -1,0 +1,6 @@
+    <html>
+      <head></head>
+      <body>
+	<input placeholder="inside frame" onblur="console.log('Inside Input Blurred');"></input>
+	</body>
+      </html>

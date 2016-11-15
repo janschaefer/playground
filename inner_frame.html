@@ -1,0 +1,13 @@
+    <html>
+      <head>
+	<script>
+	  function handleBlur() {
+	  console.log('Inside Input Blurred');
+	  document.body.innerHTML += "<div>Inside Input Blurred</div>";
+	  }
+	</script>
+      </head>
+      <body>
+	<input placeholder="inside frame" onblur="handleBlur()"></input>
+	</body>
+      </html>
