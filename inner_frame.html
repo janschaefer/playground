@@ -5,9 +5,12 @@
 	  console.log('Inside Input Blurred');
 	  document.body.innerHTML += "<div>Inside Input "+i+" Blurred</div>";
 	  }
+	  window.onblur = function() {
+		handleBlur("Window");
+	  }
 	</script>
       </head>
-      <body>
+      <body onblur="handleBlur('Body')">
 	1: <input placeholder="inside frame" onblur="handleBlur(1)"></input><br>
 	2: <input placeholder="inside frame" onblur="handleBlur(2)"></input>
 	</body>
