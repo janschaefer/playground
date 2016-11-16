@@ -5,13 +5,16 @@
     <title>Test</title>
     <script src="jquery.js" ></script>
     <script>
-	  function handleBlur(i) {
-	      document.body.innerHTML += "<div>"+i+" Blurred</div>";
-	  }
+      function handleBlur(i) {
+      var divNode = document.createElement("div");
+      var textNode = document.createTextNode(i+" Blurred");
+      divNode.appendChild(textNode);
+      document.body.appendChild(divNode);     
+      }
 
-	  window.onblur = function() {
-		handleBlur("Outside Window");
-	  }
+      window.onblur = function() {
+       handleBlur("Outside Window");
+      }
     </script>
 </head>
  <body onblur="handleBlur('Body')">

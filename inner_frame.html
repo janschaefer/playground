@@ -2,8 +2,10 @@
       <head>
 	<script>
 	  function handleBlur(i) {
-	  console.log('Inside Input Blurred');
-	  document.body.innerHTML += "<div>"+i+" Blurred</div>";
+      var divNode = document.createElement("div");
+      var textNode = document.createTextNode(i+" Blurred");
+      divNode.appendChild(textNode);
+      document.body.appendChild(divNode);     
 	  }
 	  window.onblur = function() {
 		handleBlur("Window");
