@@ -4,10 +4,18 @@
     <meta charset="UTF-8">
     <title>Test</title>
     <script src="jquery.js" ></script>
+    <script>
+	  function handleBlur(i) {
+	  document.body.innerHTML += "<div>"+i+" Blurred</div>";
+	  }
+	  $(window).on('blur', function() {
+		handleBlur("Outside Window");
+	  });
+    </script>
 </head>
-<body>
-  <h1>Version 3</h1>
-  <input placeholder="outside frame" ></input>
+ <body onblur="handleBlur('Body')">
+  <h1>Version 5</h1>
+  <input placeholder="outside frame" onblur="handleBlur('Outside Input')" ></input>
   <iframe src="inner_frame.html"></iframe>
 <script>
 </script>
