@@ -6,15 +6,16 @@
     <script src="jquery.js" ></script>
     <script>
 	  function handleBlur(i) {
-	  document.body.innerHTML += "<div>"+i+" Blurred</div>";
+	      document.body.innerHTML += "<div>"+i+" Blurred</div>";
 	  }
-	  $(window).on('blur', function() {
+
+	  window.onblur = function() {
 		handleBlur("Outside Window");
-	  });
+	  }
     </script>
 </head>
  <body onblur="handleBlur('Body')">
-  <h1>Version 5</h1>
+  <h1>Version 6</h1>
   <input placeholder="outside frame" onblur="handleBlur('Outside Input')" ></input>
   <iframe src="inner_frame.html"></iframe>
 <script>
